@@ -21,13 +21,16 @@ export function Header() {
         <header className={isScrolled ? styles.headerContainerScrolled : styles.headerContainer}
         >
             <div className={styles.logoHeader}>
-                <img src={logo} alt="Logo" />
+                <a href="#firstScreen">
+                    <img src={logo} alt="Logo" />
+                </a>
             </div>
 
             <nav className={styles.navHeader}>
                 <ul>
-                    <li><a>Quem somos?</a></li>
-                    <li><a>Nossos serviços</a></li>
+                    <li><a href='#whoAreWe'>Quem somos?</a></li>
+                    <li><a href='#ourServices'>Nossos serviços</a></li>
+                    <li><a href='#businessNews'>Notícias empresariais</a></li>
                     <li><a>Fale conosco</a></li>
                 </ul>
             </nav>

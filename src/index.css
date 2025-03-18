@@ -6,6 +6,7 @@
   --black: #333;
   --details: #7ED957;
   --textWpp: #02B395;
+  --span: #778899;
 }
 
 *{
@@ -33,7 +34,6 @@ button{
 
 a{
   text-decoration: none;
-  color: fff;
 }
 
 ul{
