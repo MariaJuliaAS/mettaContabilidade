@@ -1,0 +1,59 @@
+.whoAreWeContainer{
+    height: 100vh;
+    background: var(--gradientWhoAreWe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.whoAreWeContetn, .logoWhoAreWe{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.whoAreWeContetn{
+    align-items: center;
+}
+
+.whoAreWeContetn h1, p{
+    max-width: 700px;
+}
+
+.whoAreWeContetn h1{
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: var(--black);
+}
+
+.whoAreWeContetn p{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.logoWhoAreWe img{
+    width: 470px;
+    height: 470px;
+    margin: 0 auto;
+}
+
+.footerBtn{
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    background-color: var(--details);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.noFooterBtn{
+    position: fixed;
+    left: 100px;
+}

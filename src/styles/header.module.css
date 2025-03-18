@@ -1,0 +1,42 @@
+.headerContainer, .headerContainerScrolled{
+    position: fixed;
+    left: 20%;
+    top: 20px;
+    width: 60%;
+    height: 7%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.headerContainer{
+    background-color: var(--white);
+}
+
+.headerContainerScrolled{
+    background: var(--gradientHeader);
+}
+
+.logoHeader img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+}
+
+.navHeader ul{
+    display: flex;
+    gap: 20px;
+}
+.navHeader li{
+    font-weight: bold;
+    color: var(--black);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.navHeader li:hover{
+    transform: scale(1.05);
+}

@@ -1,0 +1,41 @@
+:root{
+  --gradient: linear-gradient(180deg, rgba(2,179,149,1) 0%, rgba(126,217,87,1) 100%);
+  --gradientHeader: linear-gradient(90deg, rgba(2,179,149,1) 0%, rgba(126,217,87,1) 100%);
+  --gradientWhoAreWe: linear-gradient(180deg, rgba(126,217,87,1) 0%, rgba(255,255,255,1) 10%);
+  --white: #fff;
+  --black: #333;
+  --details: #7ED957;
+  --textWpp: #02B395;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  width: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  overflow-x: hidden;
+}
+
+button{
+  cursor: pointer;
+  border: 0;
+}
+
+a{
+  text-decoration: none;
+  color: fff;
+}
+
+ul{
+  list-style: none;
+}
