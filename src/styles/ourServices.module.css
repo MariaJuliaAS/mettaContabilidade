@@ -53,3 +53,12 @@
 .btnWpp:hover{
     transform: scale(1.05);
 }
+
+@media (max-width: 1550px){
+    .ourServicesContent{
+        height: 60%;
+    }
+    .ourServicesText{
+        max-width: 90%;
+    }
+}
