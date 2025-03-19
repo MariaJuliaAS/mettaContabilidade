@@ -8,14 +8,14 @@
 }
 
 .businessNewsContent{
-    max-width: 1700px;
+    max-width: 1400px;
 }
 
 .businessNewsHeader{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .businessNewsHeader h1{
@@ -42,7 +42,7 @@
 }
 
 .news h1{
-    font-size: 32px;
+    font-size: 28px;
     color: var(--black);
     margin-bottom: 10px;
 }
