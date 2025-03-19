@@ -1,5 +1,5 @@
 import styles from '../../styles/whoAreWe.module.css';
-import logoWhoAreWe from '../../assets/logoNaoCortada.png';
+import logoWhoAreWe from '../../assets/logoRedonda.png';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import iconWpp from '../../assets/icons8-whatsapp-48.png';

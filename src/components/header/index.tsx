@@ -1,5 +1,5 @@
 import styles from '../../styles/header.module.css';
-import logo from '../../assets/logoCortada.png';
+import logo from '../../assets/logoRedonda.png';
 import { useState, useEffect } from 'react';
 
 export function Header() {
