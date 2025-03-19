@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 30px;
+    padding: 10px 30px;
 }
 
 .headerContainer{
@@ -42,4 +42,14 @@
 
 .navHeader a{
     color: var(--black);
+}
+
+@media (max-width: 1550px){
+    .headerContainer, .headerContainerScrolled{
+        height: 9%;
+        width: 63%;
+    }
+    .navHeader li{
+        font-size: 18px;
+    }
 }
