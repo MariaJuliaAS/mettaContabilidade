@@ -11,8 +11,11 @@ export function FirstScreen() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-            <h1>Metta Contabilidade</h1>
-            <span>Acessoria contábil</span>
+
+            <div className={styles.textLogo}>
+                <h1>Metta Contabilidade</h1>
+                <span>Acessoria contábil</span>
+            </div>
 
             <div className={styles.btnWpp}>
                 <img src={iconWpp} alt="icon whatsapp" />
@@ -20,7 +23,7 @@ export function FirstScreen() {
             </div>
 
             <footer className={styles.footerBtn}>
-                <a href='#whoAreWe'><FaArrowDown size={30} color='#333' /></a>
+                <a href='#whoAreWe'><FaArrowDown size={25} color='#333' /></a>
             </footer>
 
         </motion.section>
