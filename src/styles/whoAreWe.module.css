@@ -58,3 +58,13 @@
 .btnWpp:hover{
     transform: scale(1.05);
 }
+
+@media (max-width: 1550px){
+    .whoAreWeContetn h1, p{
+        max-width: 600px;
+    }
+    .logoWhoAreWe img{
+        width: 400px;
+        height: 400px;
+    }
+}
