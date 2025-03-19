@@ -31,7 +31,7 @@ export function Header() {
                     <li><a href='#whoAreWe'>Quem somos?</a></li>
                     <li><a href='#ourServices'>Nossos serviços</a></li>
                     <li><a href='#businessNews'>Notícias empresariais</a></li>
-                    <li><a>Fale conosco</a></li>
+                    <li><a href='#contactUs'>Fale conosco</a></li>
                 </ul>
             </nav>
         </header>

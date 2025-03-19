@@ -1,0 +1,96 @@
+.contactUsContainer{
+    height: 100vh;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+
+.contactUsContent{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.whyHireUsArea, .contactUsArea{
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactUsText{
+    background-color: var(--details);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 4px;
+    gap: 40px;
+    padding: 30px 40px 80px 40px;
+}
+
+.contactUsText h1{
+    color: var(--white);
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.btnArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnArea img{
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+}
+
+.btnArea a, .btnArea span{
+    color: var(--white);
+    font-size: 24px;
+    max-width: 500px;
+}
+
+.whyHireUsText{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 4px;
+    gap: 40px;
+    padding: 80px 40px;
+}
+
+.whyHireUsText h1{
+    color: var(--black);
+    font-size: 48px;
+}
+
+.imgArea {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.imgArea img{
+    width: 90px;
+    height: 90px;
+}
+
+.img{
+    display: flex;
+    align-items: center;
+}
+
+.img span{
+    color: var(--black);
+    font-size: 24px;
+    margin-left: 20px;
+}

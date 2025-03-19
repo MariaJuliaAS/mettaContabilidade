@@ -3,6 +3,7 @@ import { FirstScreen } from "../../components/homeComponents/firstScreen";
 import { WhoAreWe } from "../../components/homeComponents/whoAreWe";
 import { OurServices } from "../../components/homeComponents/ourServices";
 import { BusinessNews } from "../../components/homeComponents/businessNews";
+import { ContactUs } from '../../components/homeComponents/contactUs';
 
 export function Home() {
     return (
@@ -11,6 +12,7 @@ export function Home() {
             <WhoAreWe />
             <OurServices />
             <BusinessNews />
+            <ContactUs />
         </main>
     )
 }
