@@ -1,5 +1,5 @@
-import styles from '../../styles/firstScreen.module.css';
-import iconWpp from '../../assets/icons8-whatsapp-48.png';
+import styles from '../../../styles/firstScreen.module.css';
+import iconWpp from '../../../assets/icons8-whatsapp-48.png';
 import { FaArrowDown } from "react-icons/fa6";
 import { motion } from 'framer-motion';
 

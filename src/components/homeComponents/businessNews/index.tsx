@@ -1,4 +1,4 @@
-import styles from '../../styles/businessNews.module.css';
+import styles from '../../../styles/businessNews.module.css';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 

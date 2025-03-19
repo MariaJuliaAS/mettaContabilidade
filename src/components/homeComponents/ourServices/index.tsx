@@ -1,5 +1,5 @@
-import styles from '../../styles/ourServices.module.css';
-import iconWpp from '../../assets/icons8-whatsapp-48.png';
+import styles from '../../../styles/ourServices.module.css';
+import iconWpp from '../../../assets/icons8-whatsapp-48.png';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
