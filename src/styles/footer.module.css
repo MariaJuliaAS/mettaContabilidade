@@ -24,3 +24,28 @@
     width: 34px;
     height: 34px;
 }
+
+.btnBackToTop{
+    background-color: var(--white);
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 770px;
+    top: 60px;
+    transition: 0.3s all ease-in-out;
+}
+
+.btnBackToTop:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width: 1550px){
+    .btnBackToTop{
+        left: 570px;
+        top: 50px;
+    }
+}
