@@ -1,0 +1,51 @@
+.addNewsFormContainer{
+    height: 100vh;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addNewsContent{
+    max-width: 900px;
+    width: 900px;
+    padding: 0 30px;
+}
+
+.addNewsContent h1{
+    color: var(--black);
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form input, textarea{
+    border: 1px solid var(--span);
+    border-radius: 4px;
+    padding: 15px 20px;
+    width: 100%;
+    color: var(--black);
+}
+
+.form input::placeholder, .form textarea::placeholder{
+    color: var(--black);
+}
+
+.form  button{
+    background-color: var(--details);
+    padding: 15px;
+    border-radius: 4px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.3s all ease-in-out;
+}
+
+.form  button:hover{
+    transform: scale(1.05);
+}

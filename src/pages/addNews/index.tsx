@@ -1,5 +1,9 @@
+import { AddNewsForm } from "../../components/addNewsForm"
+
 export function AddNews() {
     return (
-        <h1>Adicionar noticia</h1>
+        <main>
+            <AddNewsForm />
+        </main>
     )
 }
