@@ -1,15 +1,17 @@
 import styles from '../../styles/header.module.css';
 import logo from '../../assets/logoRedonda.png';
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false)
+    const location = useLocation();
 
     useEffect(() => {
 
         const handleScroll = () => {
 
-            setIsScrolled(window.scrollY > window.innerHeight ? true : false);
+            setIsScrolled(window.scrollY > window.innerHeight - 20 ? true : false);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -17,8 +19,10 @@ export function Header() {
 
     }, [])
 
+    const headerLocation = location.pathname === '/addNews';
+
     return (
-        <header className={isScrolled ? styles.headerContainerScrolled : styles.headerContainer}
+        <header className={isScrolled || headerLocation ? styles.headerContainerScrolled : styles.headerContainer}
         >
             <div className={styles.logoHeader}>
                 <a href="#firstScreen">
