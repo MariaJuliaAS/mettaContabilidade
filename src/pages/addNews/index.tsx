@@ -5,6 +5,7 @@ import { db } from '../../services/firebaseConnection';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../../services/firebaseConnection';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 interface NewsProps {
     title: string;
@@ -35,7 +36,7 @@ export function AddNews() {
             publicationDate: String(new Date())
         })
             .then(() => {
-                alert("Noticia adicionada")
+                toast.success("Noticia adicionada com sucesso!")
                 setNewsInput({
                     title: "",
                     news: ""

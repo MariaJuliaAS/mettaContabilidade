@@ -3,7 +3,9 @@ import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../services/firebaseConnection";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import imgCalculator from "../../assets/undraw_calculator_21hp.png";
+import CircularProgress from '@mui/material/CircularProgress';
 
 interface AuthProps {
     email: string;
@@ -12,6 +14,7 @@ interface AuthProps {
 
 export function AddNewsAuth() {
     const navigate = useNavigate()
+    const [loading, setLoading] = useState(false)
     const [authInput, setAuthInput] = useState<AuthProps>({
         email: "",
         password: ""
@@ -19,15 +22,23 @@ export function AddNewsAuth() {
 
     async function login(event: React.FormEvent) {
         event.preventDefault()
+        setLoading(true)
 
         await signInWithEmailAndPassword(auth, authInput.email, authInput.password)
             .then(() => {
-                alert("usuário logado")
+                toast.success("Usuário logado com sucesso!")
+                setLoading(false)
                 navigate("/addNews", { replace: true })
             })
             .catch((error) => {
                 console.log("Erro ao logar usuário: " + error)
             })
+    }
+
+    if (loading) {
+        <div>
+            <CircularProgress size={50} style={{ color: "#333" }} />
+        </div>
     }
 
     return (
