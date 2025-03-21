@@ -19,7 +19,7 @@ export function Header() {
 
     }, [])
 
-    const headerLocation = location.pathname === '/addNews';
+    const headerLocation = location.pathname === '/addNews' || location.pathname === "/addNewsAuth";
 
     return (
         <header className={isScrolled || headerLocation ? styles.headerContainerScrolled : styles.headerContainer}
