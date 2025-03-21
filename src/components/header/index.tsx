@@ -27,8 +27,7 @@ export function Header() {
         location.pathname === "/allNews"
 
     return (
-        <header className={isScrolled || headerLocation ? styles.headerContainerScrolled : styles.headerContainer}
-        >
+        <header className={isScrolled || headerLocation ? styles.headerContainerScrolled : styles.headerContainer}>
             <div className={styles.logoHeader}>
                 <a href="/#firstScreen">
                     <img src={logo} alt="Logo" />

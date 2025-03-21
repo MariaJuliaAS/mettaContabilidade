@@ -1,7 +1,7 @@
 .headerContainer, .headerContainerScrolled{
     position: fixed;
+    top: 2%;
     left: 20%;
-    top: 10px;
     width: 60%;
     height: 7%;
     border-radius: 8px;

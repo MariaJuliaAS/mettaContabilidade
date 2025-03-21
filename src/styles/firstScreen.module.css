@@ -1,5 +1,6 @@
 .firstScreenContainer{
     height: 100vh;
+    width: 100%;
     background: var(--gradient);
     display: flex;
     flex-direction: column;
@@ -80,3 +81,12 @@
         font-size: 15px;
     }
 }
+
+/* @media (max-width: 570px){
+    .textLogo h1{
+        font-size: 34px;
+    }
+    .textLogo span{
+        font-size: 20px;
+    }
+} */
