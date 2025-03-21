@@ -3,14 +3,17 @@ import { useState, useEffect } from "react";
 import { db } from "../../services/firebaseConnection";
 import { collection, getDocs } from "firebase/firestore";
 import { formatDate } from "../../utils/formatDate";
+import { useNavigate } from "react-router-dom";
 
 interface NewsProps {
     title: string;
     news: string;
     publicationDate: string;
+    docId: string
 }
 
 export function AllNews() {
+    const navigate = useNavigate()
     const [news, setNews] = useState<NewsProps[]>([])
 
     useEffect(() => {
@@ -25,7 +28,8 @@ export function AllNews() {
                         list.push({
                             title: item.data().title,
                             news: item.data().news,
-                            publicationDate: item.data().publicationDate
+                            publicationDate: item.data().publicationDate,
+                            docId: item.id
                         })
                     })
 
@@ -48,7 +52,7 @@ export function AllNews() {
                         <h1>{item.title}</h1>
                         <span>{formatDate(item.publicationDate)}</span>
                         <p>{item.news}</p>
-                        <button>Saiba mais</button>
+                        <button onClick={() => navigate(`/news/${item.docId}`)}>Saiba mais</button>
                     </div>
                 ))}
             </section>
