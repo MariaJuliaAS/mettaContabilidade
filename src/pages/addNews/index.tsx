@@ -29,7 +29,11 @@ export function AddNews() {
     async function handleAddNews(event: React.FormEvent) {
         event.preventDefault()
 
-        await addDoc(collection(db, "news"), newsInput)
+        await addDoc(collection(db, "news"), {
+            title: newsInput.title,
+            news: newsInput.news,
+            publicationDate: new Date()
+        })
             .then(() => {
                 alert("Noticia adicionada")
                 setNewsInput({
