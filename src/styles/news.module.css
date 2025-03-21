@@ -1,0 +1,60 @@
+.newsContainer{
+    height: 100%;
+    min-height: 100vh;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.newsContent{
+    width: 1400px;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    margin: 150px 0;
+}
+
+.newsContent h1{
+    font-size: 36px;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.newsContent span{
+    color: var(--span);
+}
+
+.newsContent p{
+    width: 1400px;
+    max-width: 1400px;
+    margin-top: 40px;
+    white-space: pre-wrap; /*O texto é exibido preservando as quebras de linha*/
+    word-wrap: break-word; /*Se a palavra não couber naquela linha ela é quebrada e continua em baixo*/
+}
+
+.btn{
+    background-color: var(--black);
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 30px;
+    transition: 0.3s all ease-in-out;
+}
+
+.btn button{
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}

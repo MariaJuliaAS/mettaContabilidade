@@ -1,12 +1,61 @@
 import styles from '../../../styles/businessNews.module.css';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { collection, onSnapshot } from 'firebase/firestore';
+import { db } from '../../../services/firebaseConnection';
+import { useNavigate } from 'react-router-dom';
+
+interface NewsProps {
+    title: string,
+    news: string,
+    publicationDate: string,
+    docId: string;
+}
 
 export function BusinessNews() {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.5
     })
+    const navigate = useNavigate()
+    const [news, setNews] = useState<NewsProps[]>()
+
+    useEffect(() => {
+
+        async function verifyNews() {
+
+            onSnapshot(collection(db, "news"), (snapshot) => {
+                let list: NewsProps[] = []
+
+                snapshot.forEach((item) => {
+                    list.push({
+                        title: item.data().title,
+                        news: item.data().news,
+                        publicationDate: item.data().publicationDate,
+                        docId: item.id
+                    })
+                })
+
+                setNews(list)
+
+            })
+
+        }
+
+        verifyNews()
+
+    }, [])
+
+    function formatDate(dateString: string): string {
+        const date = new Date(dateString)
+
+        return `Publicado em ${date.toLocaleDateString("pt-BR", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+        })}`
+    }
 
     return (
         <section className={styles.businessNewsContainer} id='businessNews'>
@@ -18,42 +67,37 @@ export function BusinessNews() {
                 transition={{ duration: 0.8 }}
             >
 
-                <div className={styles.businessNewsHeader}>
-                    <h1>Notícias empresariais</h1>
-
-                    <div className={styles.btn}>
-                        <a href="#">Mais notícias</a>
+                {news?.length === 0 ? (
+                    <div className={styles.noNews}>
+                        <h1>Novas notícias aparecerão aqui!</h1>
                     </div>
+                ) :
+                    <>
+                        <div className={styles.businessNewsHeader}>
+                            <h1>Notícias empresariais</h1>
 
-                </div>
+                            <div className={styles.btn}>
+                                <a href="#">Mais notícias</a>
+                            </div>
 
-                <div className={styles.newsArea}>
+                        </div>
 
-                    <div className={styles.news}>
-                        <h1>DAS-MEI atrasado? Veja como evitar multas, perda do CNPJ e problemas com o INSS</h1>
-                        <span>Publicado em 18 de março de 2025</span>
-                        <p>O Microempreendedor Individual (MEI) é uma categoria empresarial simplificada que oferece benefícios e exige poucas obrigações,
-                            especialmente relacionadas ao pagamento mensal do Documento de Arrecadação do...</p>
-                        <a href="#">Saiba mais</a>
-                    </div>
+                        <div className={styles.newsArea}>
 
-                    <div className={styles.news}>
-                        <h1>DAS-MEI atrasado? Veja como evitar multas, perda do CNPJ e problemas com o INSS</h1>
-                        <span>Publicado em 18 de março de 2025</span>
-                        <p>O Microempreendedor Individual (MEI) é uma categoria empresarial simplificada que oferece benefícios e exige poucas obrigações,
-                            especialmente relacionadas ao pagamento mensal do Documento de Arrecadação do...</p>
-                        <a href="#">Saiba mais</a>
-                    </div>
+                            {news?.slice(0, 3).map((item, index) => (
+                                <div className={styles.news} key={index}>
+                                    <h1>{item.title}</h1>
+                                    <span>{formatDate(item.publicationDate)}</span>
+                                    <p>{item.news}</p>
+                                    <button onClick={() => navigate(`/news/${item.docId}`)}>Saiba mais</button>
+                                </div>
+                            ))}
 
-                    <div className={styles.news}>
-                        <h1>DAS-MEI atrasado? Veja como evitar multas, perda do CNPJ e problemas com o INSS</h1>
-                        <span>Publicado em 18 de março de 2025</span>
-                        <p>O Microempreendedor Individual (MEI) é uma categoria empresarial simplificada que oferece benefícios e exige poucas obrigações,
-                            especialmente relacionadas ao pagamento mensal do Documento de Arrecadação do...</p>
-                        <a href="#">Saiba mais</a>
-                    </div>
+                        </div>
+                    </>
 
-                </div>
+                }
+
             </motion.div>
 
 

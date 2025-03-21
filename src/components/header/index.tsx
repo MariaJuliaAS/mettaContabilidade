@@ -1,7 +1,7 @@
 import styles from '../../styles/header.module.css';
 import logo from '../../assets/logoRedonda.png';
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { matchPath, useLocation } from 'react-router-dom';
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -19,7 +19,11 @@ export function Header() {
 
     }, [])
 
-    const headerLocation = location.pathname === '/addNews' || location.pathname === "/addNewsAuth";
+    const newsPage = matchPath("/news/:id", location.pathname)
+
+    const headerLocation = location.pathname === '/addNews' ||
+        location.pathname === "/addNewsAuth" ||
+        newsPage
 
     return (
         <header className={isScrolled || headerLocation ? styles.headerContainerScrolled : styles.headerContainer}

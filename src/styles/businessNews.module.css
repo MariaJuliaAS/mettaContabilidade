@@ -9,6 +9,9 @@
 
 .businessNewsContent{
     max-width: 1400px;
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
 }
 
 .businessNewsHeader{
@@ -16,6 +19,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    gap: 20px;
 }
 
 .businessNewsHeader h1{
@@ -26,14 +30,24 @@
 .newsArea{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 100px;
+    max-width: 1400px;
+    width: 1440px;
 }
 
 .news{
     width: 450px;
+    max-width: 450px;
+    max-height: 500px;
     border: 1px solid #dcdcdc;
     padding: 25px;
     transition: 0.3s all ease-in-out;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .news:hover{
@@ -55,14 +69,21 @@
     color: var(--black);
     margin: 25px 0;
     font-size: 18px;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
-.news a, .btn a{
+.news button, .btn a{
     background-color: var(--black);
     color: var(--white);
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 24px;
+    text-align: center;
 }
 
 .btn{
@@ -71,4 +92,9 @@
 
 .btn:hover{
     transform: scale(1.1);
+}
+
+.noNews h1{
+    font-size: 48px;
+    color: var(--black);
 }

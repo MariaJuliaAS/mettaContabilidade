@@ -32,7 +32,7 @@ export function AddNews() {
         await addDoc(collection(db, "news"), {
             title: newsInput.title,
             news: newsInput.news,
-            publicationDate: new Date()
+            publicationDate: String(new Date())
         })
             .then(() => {
                 alert("Noticia adicionada")
