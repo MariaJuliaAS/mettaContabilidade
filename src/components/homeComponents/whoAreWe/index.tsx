@@ -6,7 +6,7 @@ import iconWpp from '../../../assets/icons8-whatsapp-48.png';
 
 export function WhoAreWe() {
     const { ref, inView } = useInView({
-        triggerOnce: false,
+        triggerOnce: true,
         threshold: 0.5
     })
 

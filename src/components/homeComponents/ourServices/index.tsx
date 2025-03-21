@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export function OurServices() {
     const { ref, inView } = useInView({
-        triggerOnce: false,
+        triggerOnce: true,
         threshold: 0.5
     })
 

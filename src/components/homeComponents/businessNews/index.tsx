@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export function BusinessNews() {
     const { ref, inView } = useInView({
-        triggerOnce: false,
+        triggerOnce: true,
         threshold: 0.5
     })
 
