@@ -4,6 +4,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import styles from "../../styles/news.module.css";
 import { FaLongArrowAltLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 interface NewsProps {
     title: string;
@@ -13,6 +14,7 @@ interface NewsProps {
 
 export function News() {
     const { id } = useParams<{ id: string }>();
+    const navigate = useNavigate()
     const [news, setNews] = useState<NewsProps | null>()
 
     useEffect(() => {
@@ -65,7 +67,7 @@ export function News() {
 
                 <div className={styles.btn}>
                     <FaLongArrowAltLeft size={25} color="#fff" />
-                    <button>Voltar para as notícias</button>
+                    <button onClick={() => navigate("/allNews")}>Voltar para as notícias</button>
                 </div>
             </section>
         </main>

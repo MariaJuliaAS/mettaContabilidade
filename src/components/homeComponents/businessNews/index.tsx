@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../services/firebaseConnection';
 import { useNavigate } from 'react-router-dom';
+import { formatDate } from '../../../utils/formatDate';
 
 interface NewsProps {
     title: string,
@@ -47,16 +48,6 @@ export function BusinessNews() {
 
     }, [])
 
-    function formatDate(dateString: string): string {
-        const date = new Date(dateString)
-
-        return `Publicado em ${date.toLocaleDateString("pt-BR", {
-            day: "2-digit",
-            month: "long",
-            year: "numeric",
-        })}`
-    }
-
     return (
         <section className={styles.businessNewsContainer} id='businessNews'>
 
@@ -77,7 +68,7 @@ export function BusinessNews() {
                             <h1>Notícias empresariais</h1>
 
                             <div className={styles.btn}>
-                                <a href="#">Mais notícias</a>
+                                <button onClick={() => navigate("/allNews")}>Mais notícias</button>
                             </div>
 
                         </div>
