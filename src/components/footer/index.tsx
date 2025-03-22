@@ -1,7 +1,7 @@
 import styles from '../../styles/footer.module.css';
 import githubLog from '../../assets/github-logo.png';
 import linkedinLogo from '../../assets/linkedin.png';
-import { FaArrowUp } from "react-icons/fa6";
+// import { FaArrowUp } from "react-icons/fa6";
 
 export function Footer() {
     return (
@@ -15,8 +15,6 @@ export function Footer() {
                 </div>
 
             </div>
-
-            <a className={styles.btnBackToTop} href="#firstScreen"><FaArrowUp size={25} color='#333' /></a>
         </footer>
     )
 }
