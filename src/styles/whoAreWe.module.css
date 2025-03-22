@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    padding: 0 20px;
 }
 
 .whoAreWeContetn, .logoWhoAreWe{
@@ -59,12 +60,28 @@
     transform: scale(1.05);
 }
 
-@media (max-width: 1550px){
+@media (max-width: 1640px){
     .whoAreWeContetn h1, p{
         max-width: 600px;
     }
     .logoWhoAreWe img{
         width: 400px;
         height: 400px;
+    }
+}
+
+@media (max-width: 1020px){
+    .logoWhoAreWe img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 850px){
+    .whoAreWeContetn h1, p{
+        max-width: 500px;
+    }
+    .logoWhoAreWe {
+        display: none;
     }
 }
