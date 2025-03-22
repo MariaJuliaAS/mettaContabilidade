@@ -53,63 +53,6 @@
     color: var(--black);
 }
 
-/* .headerContainer, .headerContainerScrolled{
-    position: sticky;
-    top: 2%;
-    left: 20%;
-    width: 60%;
-    height: 7%;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    z-index: 10;
-}
-
-.headerContainer{
-    background-color: var(--white);
-}
-
-.headerContainerScrolled{
-    background: var(--gradientHeader);
-}
-
-.logoHeader img{
-    width: 48px;
-    height: 48px;
-    border-radius: 50px;
-}
-
-.navHeader ul{
-    display: flex;
-    gap: 20px;
-}
-.navHeader li{
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s all ease-in-out;
-}
-
-.navHeader li:hover{
-    transform: scale(1.05);
-}
-
-.navHeader a{
-    color: var(--black);
-}
-
-@media (max-width: 1550px){
-    .headerContainer, .headerContainerScrolled{
-        height: 9%;
-        width: 63%;
-    }
-    .navHeader li{
-        font-size: 18px;
-    }
-} */
-
 @media (max-width: 1550px){
     .headerContainer{
         padding: 0 50px;
