@@ -27,21 +27,23 @@ export function Header() {
         location.pathname === "/allNews"
 
     return (
-        <header className={isScrolled || headerLocation ? styles.headerContainerScrolled : styles.headerContainer}>
-            <div className={styles.logoHeader}>
-                <a href="/#firstScreen">
-                    <img src={logo} alt="Logo" />
-                </a>
-            </div>
+        <header className={styles.headerContainer}>
+            <div className={isScrolled || headerLocation ? styles.headerContentScrolled : styles.headerContent}>
+                <div className={styles.logoHeader}>
+                    <a href="/#firstScreen">
+                        <img src={logo} alt="Logo" />
+                    </a>
+                </div>
 
-            <nav className={styles.navHeader}>
-                <ul>
-                    <li><a href='/#whoAreWe'>Quem somos?</a></li>
-                    <li><a href='/#ourServices'>Nossos serviços</a></li>
-                    <li><a href='/#businessNews'>Notícias empresariais</a></li>
-                    <li><a href='/#contactUs'>Fale conosco</a></li>
-                </ul>
-            </nav>
+                <nav className={styles.navHeader}>
+                    <ul>
+                        <li><a href='/#whoAreWe'>Quem somos nós?</a></li>
+                        <li><a href='/#ourServices'>Nossos serviços</a></li>
+                        <li><a href='/#businessNews'>Notícias empresariais</a></li>
+                        <li><a href='/#contactUs'>Fale conosco</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
     )
 }

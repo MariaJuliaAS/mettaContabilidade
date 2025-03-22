@@ -1,5 +1,60 @@
-.headerContainer, .headerContainerScrolled{
+.headerContainer{
+    width: 100%;
+    height: 70px;
     position: fixed;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 0 100px;
+}
+
+.headerContent, .headerContentScrolled{
+    width: 70%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    z-index: 10;
+}
+
+.headerContent{
+    background-color: var(--white);
+}
+
+.headerContentScrolled{
+    background: var(--gradientHeader);
+}
+
+.logoHeader img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+}
+
+.navHeader ul{
+    display: flex;
+    gap: 20px;
+}
+.navHeader li{
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    text-align: center;
+}
+
+.navHeader li:hover{
+    transform: scale(1.05);
+}
+
+.navHeader a{
+    color: var(--black);
+}
+
+/* .headerContainer, .headerContainerScrolled{
+    position: sticky;
     top: 2%;
     left: 20%;
     width: 60%;
@@ -52,5 +107,49 @@
     }
     .navHeader li{
         font-size: 18px;
+    }
+} */
+
+@media (max-width: 1550px){
+    .headerContainer{
+        padding: 0 50px;
+    }
+    .headerContent, .headerContentScrolled{
+        width: 100%;
+    }
+    .navHeader li{
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 950px){
+    .headerContainer{
+        padding: 0 10px;
+    }
+    .headerContent, .headerContentScrolled{
+        width: 90%;
+    }
+    .navHeader ul{
+        gap: 10px;
+    }
+}
+
+@media (max-width: 660px){
+    .headerContainer{
+        padding: 0;
+    }
+    .headerContent, .headerContentScrolled{
+        padding: 10px;
+    }
+    .navHeader ul{
+        gap: 10px;
+    }
+    .navHeader li{
+        font-weight: normal;
+        font-size: 15px;
+    }
+    .logoHeader img{
+        width: 44px;
+        height: 44px;
     }
 }
