@@ -127,7 +127,7 @@
 
 @media (max-width: 650px){
     .businessNewsHeader h1{
-        font-size: 30px;
+        font-size: 24px;
     }
     .newsArea{
         gap: 10px;
@@ -135,13 +135,17 @@
     .news{
         width: 350px;
         max-width: 350px;
+        padding: 10px;
     }
     .news h1{
-        font-size: 20px;
+        font-size: 18px;
+    }
+    .news span{
+        font-size: 14px;
     }
     .btn button, .news button {
-        font-size: 18px;
-        padding: 3px;
+        font-size: 15px;
+        padding: 5px;
     }
     .btn:hover{
         transform: scale(1.03);
