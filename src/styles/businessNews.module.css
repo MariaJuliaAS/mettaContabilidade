@@ -17,6 +17,8 @@
 }
 
 .businessNewsHeader{
+    max-width: 1400px;
+    width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,7 +108,7 @@
 }
 
 @media (max-width: 1440px){
-    .businessNewsContent{
+    .businessNewsContent, .businessNewsHeader{
         max-width: 100%;
         width: 100%;
     }
