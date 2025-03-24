@@ -70,6 +70,10 @@
 }
 
 @media (max-width: 650px){
+    .allNewsContent{
+        width: 90%;
+        max-width: 90%;
+    }
     .allNewsContent h1{
         font-size: 32px;
     }
