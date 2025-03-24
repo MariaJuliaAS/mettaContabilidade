@@ -1,7 +1,6 @@
 .whoAreWeContainer{
     height: 100vh;
-    /* background: var(--gradientWhoAreWe); */
-    background-color: antiquewhite;
+    background: var(--gradientWhoAreWe);
     display: flex;
     justify-content: center;
     align-items: center;
