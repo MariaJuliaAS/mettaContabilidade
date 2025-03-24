@@ -1,6 +1,7 @@
 .whoAreWeContainer{
     height: 100vh;
-    background: var(--gradientWhoAreWe);
+    /* background: var(--gradientWhoAreWe); */
+    background-color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,5 +84,25 @@
     }
     .logoWhoAreWe {
         display: none;
+    }
+}
+@media (max-width: 620px){
+    .whoAreWeContetn h1, p{
+        max-width: 400px;
+    }
+    .whoAreWeContetn h1{
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+    .whoAreWeContetn p{
+        font-size: 18px;
+    }
+    .btnWpp{
+        padding: 3px;
+        margin-top: 20px;
+    }
+    .btnWpp img{
+        width: 36px;
+        height: 36px;
     }
 }
