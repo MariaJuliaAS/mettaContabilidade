@@ -5,7 +5,12 @@ import { useInView } from 'react-intersection-observer';
 import iconWpp from '../../../assets/icons8-whatsapp-48.png';
 
 export function WhoAreWe() {
-    const { ref, inView } = useInView({
+    const { ref: textRef, inView: textInView } = useInView({
+        triggerOnce: true,
+        threshold: 0.5
+    })
+
+    const { ref: logoRef, inView: logoInView } = useInView({
         triggerOnce: true,
         threshold: 0.5
     })
@@ -14,9 +19,9 @@ export function WhoAreWe() {
         <section className={styles.whoAreWeContainer} id='whoAreWe'>
 
             <motion.div className={styles.whoAreWeContetn}
-                ref={ref}
+                ref={textRef}
                 initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
+                animate={{ opacity: textInView ? 1 : 0, x: textInView ? 0 : -100 }}
                 transition={{ duration: 0.8 }}
             >
                 <div>
@@ -39,9 +44,9 @@ export function WhoAreWe() {
             </motion.div>
 
             <motion.div className={styles.logoWhoAreWe}
-                ref={ref}
+                ref={logoRef}
                 initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
+                animate={{ opacity: logoInView ? 1 : 0, x: logoInView ? 0 : 100 }}
                 transition={{ duration: 0.8 }}
             >
                 <img src={logoWhoAreWe} alt="Logo" />
