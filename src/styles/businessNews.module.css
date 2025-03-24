@@ -1,6 +1,6 @@
 .businessNewsContainer{
     height: 100vh;
-    background-color: var(--details);
+    background-color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,19 +125,19 @@
 
 @media (max-width: 650px){
     .businessNewsHeader h1{
-        font-size: 34px;
+        font-size: 30px;
     }
     .newsArea{
         gap: 10px;
     }
     .news{
-        width: 400px;
-        max-width: 400px;
+        width: 350px;
+        max-width: 350px;
     }
     .news h1{
-        font-size: 22px;
+        font-size: 20px;
     }
-    .btn button {
+    .btn button, .news button {
         font-size: 18px;
         padding: 3px;
     }
