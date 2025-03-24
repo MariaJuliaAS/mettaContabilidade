@@ -9,10 +9,8 @@
 }
 
 .newsContent{
-    width: 1400px;
-    max-width: 1400px;
-    display: flex;
-    flex-direction: column;
+    width: 57%;
+    max-width: 57%;
     margin: 150px 0;
 }
 
@@ -27,8 +25,8 @@
 }
 
 .newsContent p{
-    width: 1400px;
-    max-width: 1400px;
+    width: 100%;
+    max-width: 100%;
     margin-top: 40px;
     white-space: pre-wrap; /*O texto é exibido preservando as quebras de linha*/
     word-wrap: break-word; /*Se a palavra não couber naquela linha ela é quebrada e continua em baixo*/
@@ -57,4 +55,39 @@
 
 .btn:hover{
     transform: scale(1.05);
+}
+
+@media (max-width: 1560px){
+    .btn{
+        width: 40%;
+    }
+}
+
+@media (max-width: 900px){
+    .newsContent{
+        width: 100%;
+        max-width: 100%;
+        padding: 0 50px;
+    }
+    .btn{
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px){
+    .newsContent{
+        padding: 0 20px;
+    }
+    .newsContent h1{
+        font-size: 24px;
+    }
+    .newsContent span{
+        font-size: 14px;
+    }
+    .newsContent p{
+        font-size: 16px;
+    }
+    .btn{
+        width: 80%;
+    }
 }
