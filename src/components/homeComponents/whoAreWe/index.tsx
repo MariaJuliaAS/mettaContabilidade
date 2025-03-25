@@ -28,13 +28,15 @@ export function WhoAreWe() {
                     <div className={styles.textWhoAreWe}>
                         <h1>Quem nós somos?</h1>
                         <p>
-                            A <strong>Metta Contabilidade</strong> é um escritório contábil localizado em Baraúna, dedicado a oferecer soluções completas e personalizadas para empresas,
-                            autônomos e profissionais liberais. Nossa missão é simplificar a gestão contábil, fiscal e financeira dos nossos clientes, garantindo segurança,
-                            conformidade e eficiência nos processos.
+                            A <strong>Metta Contabilidade</strong> é um escritório contábil digital, localizado em Baraúna, que oferece soluções
+                            especializadas para empresas, autônomos e profissionais liberais. Nosso objetivo é simplificar a gestão contábil
+                            e financeira dos nossos clientes, proporcionando atendimento ágil e eficiente, sem a necessidade de um
+                            escritório físico.
                         </p>
                         <p>
-                            Com uma equipe experiente e qualificada, oferecemos serviços que vão desde a abertura de empresas até consultorias especializadas, sempre com
-                            foco na transparência e no crescimento sustentável do seu negócio.
+                            Com uma equipe experiente e qualificada, trabalhamos de forma online e personalizada, oferecendo serviços que vão
+                            desde a abertura de empresas até consultorias especializadas, sempre com foco na transparência e no crescimento
+                            sustentável do seu negócio.
                         </p>
                     </div>
 
