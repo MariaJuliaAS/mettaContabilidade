@@ -49,3 +49,13 @@
 .form  button:hover{
     transform: scale(1.05);
 }
+
+@media (max-width: 560px){
+    .addNewsContent h1{
+        font-size: 32px;
+    }
+    .form  button{
+        padding: 8px;
+        font-size: 18px;
+    }
+}
