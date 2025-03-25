@@ -116,8 +116,8 @@
     .whyHireUsText{
         padding: 30px 20px;
     }
-    .whyHireUsText  h1, .contactUsText h1{
-        font-size: 28px;
+    .whyHireUsText  h1{
+        font-size: 24px;
     }
     .imgArea img{
         width: 50px;
@@ -131,6 +131,7 @@
     }
     .contactUsText h1{
         margin-bottom: 10px;
+        font-size: 24px;
     }
     .btnArea a, .btnArea span{
         font-size: 16px;
