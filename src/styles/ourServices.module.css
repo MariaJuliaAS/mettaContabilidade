@@ -75,17 +75,17 @@
         height: 70%;
     }
     .ourServicesText h1{
-        font-size: 40px;
+        font-size: 24px;
     }
     .list li{
-        font-size: 20px;
+        font-size: 18px;
     }
     .btnWpp{
         padding: 3px;
-        margin-top: 20px;
+        margin-top: 18px;
     }
     .btnWpp img{
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
     }
 }

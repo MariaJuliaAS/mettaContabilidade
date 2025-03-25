@@ -90,7 +90,7 @@
         max-width: 400px;
     }
     .whoAreWeContetn h1{
-        font-size: 34px;
+        font-size: 24px;
         margin-bottom: 20px;
     }
     .whoAreWeContetn p{
@@ -101,7 +101,7 @@
         margin-top: 20px;
     }
     .btnWpp img{
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
     }
 }
