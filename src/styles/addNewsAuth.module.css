@@ -69,3 +69,37 @@
     width: auto;
     height: 520px;
 }
+
+@media (max-width: 1450px){
+    .addNewsAuthContent{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 750px){
+    .loginArea{
+        width: 500px;
+    }
+    .imgArea img{
+        height: 450px;
+    }
+}
+
+@media (max-width: 500px){
+    .addNewsAuthContent{
+        margin-top: 60px;
+    }
+    .loginArea{
+        width: 400px;
+    }
+    .loginArea h1{
+        font-size: 36px;
+    }
+    .loginArea button{
+        padding: 5px;
+        margin-top: 5px;
+    }
+    .imgArea img{
+        height: 350px;
+    }
+}
