@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .addNewsAuthContent{
@@ -12,18 +13,21 @@
     align-items: center;
     flex-direction: row;
     gap: 50px;
+    max-width: 1400px;
+    width: 100%;
 }
 
 .loginArea, .imgArea{
     display: flex;
+    justify-content: center;
     flex: 1;
 }
 
 .loginArea{
-    width: 700px;
-    padding: 50px;
-    height: 430px;
-    border-radius: 4px;
+    max-width: 700px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     background-color: var(--details);
@@ -32,33 +36,34 @@
 .loginArea h1{
     color: var(--black);
     font-size: 48px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .loginArea form{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     gap: 20px;
 }
 
 .loginArea input{
     border: 1px solid var(--span);
-    border-radius: 4px;
-    padding: 15px 20px;
+    border-radius: 6px;
+    padding: 12px 16px;
     width: 100%;
     color: var(--black);
+    font-size: 16px;
 }
 
 .loginArea button{
     background-color: var(--black);
-    padding: 15px;
-    border-radius: 4px;
+    padding: 12px;
+    border-radius: 6px;
     color: var(--white);
     font-weight: 700;
     font-size: 20px;
     transition: 0.3s all ease-in-out;
-    margin-top: 20px;
+    margin-top: 15px;
+    cursor: pointer;
 }
 
 .loginArea button:hover{
@@ -66,40 +71,57 @@
 }
 
 .imgArea img{
-    width: auto;
-    height: 520px;
+    max-width: 100%;
+    height: auto;
 }
 
-@media (max-width: 1450px){
+@media (max-width: 1024px){
     .addNewsAuthContent{
         flex-direction: column;
+        gap: 30px;
+        text-align: center;
     }
-}
-
-@media (max-width: 750px){
     .loginArea{
-        width: 500px;
+        max-width: 600px;
     }
     .imgArea img{
-        height: 450px;
+        max-height: 470px;
     }
 }
 
-@media (max-width: 500px){
-    .addNewsAuthContent{
-        margin-top: 150px;
-    }
+@media (max-width: 600px){
     .loginArea{
-        width: 400px;
+        max-width: 500px;
+        padding: 30px;
     }
     .loginArea h1{
         font-size: 36px;
     }
     .loginArea button{
-        padding: 5px;
-        margin-top: 5px;
+        font-size: 16px;
+        padding: 10px;
     }
     .imgArea img{
-        height: 350px;
+        max-height: 370px;
+    }
+}
+
+@media (max-width: 400px){
+    .loginArea{
+        max-width: 450px;
+        padding: 20px;
+    }
+    .loginArea h1{
+        font-size: 28px;
+    }
+    .loginArea input{
+        padding: 10px;
+    }
+    .loginArea button{
+        font-size: 18px;
+        padding: 8px;
+    }
+    .imgArea img{
+        max-height: 320px;
     }
 }
