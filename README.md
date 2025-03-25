@@ -1,54 +1,18 @@
-# React + TypeScript + Vite
+# Metta Contabilidade - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A landing page da **Metta Contabilidade** foi desenvolvida utilizando **React**, **Vite** e **TypeScript**. A página possui uma área exclusiva para o administrador adicionar notícias sobre o ramo, utilizando o **Firebase** para autenticação e banco de dados.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Biblioteca JavaScript para construção da interface de usuário.
+- **Vite**: Ferramenta de build moderna para desenvolvimento rápido e otimizado.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **Firebase**: Ferramenta para banco de dados e autenticação.
+- **Autenticação**: Para gerenciamento de login de administradores.
+- **Firestore**: Para armazenamento de notícias na nuvem.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Landing Page**: Uma página inicial para apresentação dos serviços da Metta Contabilidade.
+- **Área de Admin**: Apenas administradores autenticados podem acessar e adicionar notícias.
+- **Notícias Dinâmicas**: O administrador pode adicionar novas notícias que serão armazenadas no Firebase Firestore e exibidas na página inicial.
