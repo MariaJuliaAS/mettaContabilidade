@@ -5,6 +5,7 @@ import { AddNewsAuth } from "./pages/addNewsAuth";
 import { AddNews } from "./pages/addNews";
 import { AllNews } from "./pages/allNews";
 import { Layout } from "./components/layout";
+import { Private } from "./utils/private";
 
 const router = createBrowserRouter([
     {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/addNews',
-                element: <AddNews />
+                element: <Private> <AddNews /> </Private>
             },
             {
                 path: '/allNews',

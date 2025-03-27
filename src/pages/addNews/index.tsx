@@ -1,10 +1,7 @@
 import styles from '../../styles/addNews.module.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../services/firebaseConnection';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../../services/firebaseConnection';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 interface NewsProps {
@@ -13,19 +10,10 @@ interface NewsProps {
 }
 
 export function AddNews() {
-    const navigate = useNavigate()
     const [newsInput, setNewsInput] = useState<NewsProps>({
         title: "",
         news: ""
     })
-
-    useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-            if (!user) {
-                navigate("/addNewsAuth", { replace: true })
-            }
-        })
-    }, [])
 
     async function handleAddNews(event: React.FormEvent) {
         event.preventDefault()
